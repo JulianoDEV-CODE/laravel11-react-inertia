@@ -22,9 +22,9 @@ return new class extends Migration
             $table->foreignId('created_by')->constrained('users');
             $table->foreignId('updated_by')->constrained('users');
             $table->string('image_path')->nullable();
-
-
-
+            $table->date('date_of_birth')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
 
 
 
