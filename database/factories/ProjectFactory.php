@@ -19,11 +19,13 @@ class ProjectFactory extends Factory
         return [
             'name' => fake()->sentence(),
             'description' => fake()->realText(),
-            'created_at' => 1,
-            'updated_at' => 1,
+            'created_by' => 1,
+            'updated_by' => 1,
             'due_date' => fake()->dateTimeBetween('now', '+1 year'),
             'image_path' => fake()->imageUrl(),
             'status' => fake()->randomElement(['pending', 'in_progress', 'completed']),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
